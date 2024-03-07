@@ -1,26 +1,61 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+    <a href="#/mainpage"><img src="./assets/images/logo.png" alt="logo"></a>
+    <nav>
+      <ul>
+        <li><a href="#/headliners">АРТИСТЫ</a></li>
+        <li><a href="#/info">ИНФОРМАЦИЯ</a></li>
+        <li><a href="#/map">КАРТА</a></li>
+        <li><a href="#/contacts">КОНТАКТЫ</a></li>
+        <li class="buy-ticket"><a href="#/tickets">КУПИТЬ БИЛЕТ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-view></router-view>
+  <MainPage></MainPage>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from "./components/MainPage.vue";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { MainPage }
+ 
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+header {
+  background-color: #111111;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+header img {
+  margin-right: 54px;
+}
+
+ul {
+  display: flex;
+  color: #ffffff;
+  gap: 54px;
+  align-items: center;
+}
+
+ul li {
+  font-family: 'Druk Wide Cyr';
+  font-size: 10px;
+  list-style: none;
+  font-weight: 900;
+}
+
+ul li.buy-ticket {
+  background: #FFC64F;
+  padding: 10px 32px;
+  border-radius: 150px;
+}
+
 </style>
