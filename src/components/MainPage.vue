@@ -9,7 +9,7 @@
         <img src="../assets/images/main/music.png" class="circle music">
 
         <img src="../assets/images/main/logo.png" alt="logo" class="logo">
-        <button>КУПИТЬ БИЛЕТ</button>
+        <button><a href="#/tickets">КУПИТЬ БИЛЕТ</a></button>
     </div>
 </template>
 
@@ -39,7 +39,6 @@ export default {
 
     button {
         z-index: 9999;
-        color: #ffffff;
         font-size: 16px;
         padding: 16px 51px;
         border-radius: 150px;
@@ -48,9 +47,18 @@ export default {
         transition: all .2s ease;
     }
 
+    button a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: all .2s ease;
+    }
+
     button:hover {
-        color: #FFC64F;
         background-color: #ffffff;
+    }
+
+    button:hover a {
+        color: #FFC64F;
     }
 
     .circle {

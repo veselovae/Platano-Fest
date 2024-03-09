@@ -27,9 +27,9 @@
                 <h5>Список приглашенных артистов постоянно пополняется</h5>
                 <p>Подписывайся на нас в соц. сетях чтобы не пропустить обновления</p>
                 <div class="social">
-                    <img src="../assets/images/headliners/VK.png">
-                    <img src="../assets/images/headliners/IG.png">
-                    <img src="../assets/images/headliners/TG.png">
+                    <img src="../assets/images/headliners/VK.png" class="social-icon">
+                    <img src="../assets/images/headliners/IG.png" class="social-icon">
+                    <img src="../assets/images/headliners/TG.png" class="social-icon">
                 </div>
 
             </div>
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .headliners-page {
         width: 100%;
         height: calc(100vh - 50px);
@@ -186,5 +186,9 @@ export default {
     .social {
         display: flex;
         gap: 10PX
+    }
+
+    .social-icon {
+        cursor: pointer;
     }
 </style>
