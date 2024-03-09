@@ -1,13 +1,13 @@
 <template>
   <header>
-    <a href="#/mainpage"><img src="./assets/images/logo.png" alt="logo"></a>
+    <a class="logo" href="#/mainpage"><img src="./assets/images/logo.png" alt="logo"></a>
     <nav>
       <ul>
         <li><a href="#/headliners">АРТИСТЫ</a></li>
         <li><a href="#/info">ИНФОРМАЦИЯ</a></li>
         <li><a href="#/map">КАРТА</a></li>
         <li><a href="#/contacts">КОНТАКТЫ</a></li>
-        <li class="buy-ticket"><a href="#/tickets">КУПИТЬ БИЛЕТ</a></li>
+        <a href="#/tickets"><li class="buy-ticket">КУПИТЬ БИЛЕТ</li></a>
       </ul>
     </nav>
   </header>
@@ -31,7 +31,7 @@ header {
   align-items: center;
 }
 
-header img {
+.logo{
   margin-right: 54px;
 }
 
@@ -48,7 +48,7 @@ ul li {
   font-weight: 900;
 }
 
-ul li a {
+ul a {
   color: #ffffff;
   text-decoration: none;
   transform: color .2s ease;

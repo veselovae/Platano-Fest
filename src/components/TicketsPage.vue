@@ -3,28 +3,29 @@
         <div class="page-content">
             <h1>КУПИТЬ  БИЛЕТЫ</h1>
             <p class="desc">Цены увеличиваются по датам и квотам. На каждую ценовую категорию выделено ограниченное колличество билетов. Как только билеты в категории заканчваются — цена увеличивается.</p>
-        </div>
+        
 
-        <div class="tickets">
-            <div class="ticket" v-for="(ticket, index) in tickets" :key="index">
-                <p class="date">{{ ticket.date }}</p>
-                <div class="line"></div>
-                <div class="ticket-content">
-                    <div class="left-side">
-                        <h5>{{ ticket.name }}</h5>
-                        <h5>{{ ticket.days }}</h5>
-                        <p class="info">{{ ticket.info }}</p>
-                        <p class="add">{{ ticket.add }}</p>
-                    </div>
-                    <div class="right-side">
-                        <button>КУПИТЬ БИЛЕТ</button>
-                        <p class="price first">{{ ticket.price[0] }}</p>
-                        <p class="price">{{ ticket.price[1] }}</p>
-                        <p class="price">{{ ticket.price[2] }}</p>
+            <div class="tickets">
+                <div class="ticket" v-for="(ticket, index) in tickets" :key="index">
+                    <p class="date">{{ ticket.date }}</p>
+                    <div class="line"></div>
+                    <div class="ticket-content">
+                        <div class="left-side">
+                            <h5>{{ ticket.name }}</h5>
+                            <h5>{{ ticket.days }}</h5>
+                            <p class="info">{{ ticket.info }}</p>
+                            <p class="add">{{ ticket.add }}</p>
+                        </div>
+                        <div class="right-side">
+                            <button>КУПИТЬ БИЛЕТ</button>
+                            <p class="price first">{{ ticket.price[0] }}</p>
+                            <p class="price">{{ ticket.price[1] }}</p>
+                            <p class="price">{{ ticket.price[2] }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
+        </div>
     </div> 
 </template>
 
@@ -84,7 +85,7 @@ export default {
     .tickets {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 21px;
     }
 
@@ -154,6 +155,7 @@ export default {
     }
 
     button {
+        cursor: pointer;
         font-weight: 900;
         font-size: 10px;
         padding: 10px 32px;

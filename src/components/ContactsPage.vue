@@ -17,14 +17,14 @@
                 <div class="route">
                     <h5>Проложить маршрут</h5>
                     <div class="buttons">
-                        <button><a href="https://yandex.ru/maps/?um=constructor%3A29190a598ffd78ce956f6f98e4a197ad5a14486d19afcd133008681fef5f6a39&source=constructorLink">ЯНДЕКС КАРТЫ</a></button>
-                        <button><a href="https://maps.app.goo.gl/BTYTCq3fXhUdtdXV9">GOOGLE КАРТЫ</a></button>
+                        <a target="_blank" href="https://yandex.ru/maps/?um=constructor%3A29190a598ffd78ce956f6f98e4a197ad5a14486d19afcd133008681fef5f6a39&source=constructorLink">ЯНДЕКС КАРТЫ</a>
+                        <a target="_blank" href="https://maps.app.goo.gl/BTYTCq3fXhUdtdXV9">GOOGLE КАРТЫ</a>
                     </div>
                     
                 </div>
 
                 <div class="logo-social">
-                    <a href="#/mainpage"><img src="../assets/images/contact/LOGO.png"></a>
+                    <a href="#/mainpage" class="logo"><img src="../assets/images/contact/LOGO.png"></a>
                     <div class="social">
                         <div class="icons">
                             <img src="../assets/images/contact/VK.png" class="social-icon">
@@ -103,10 +103,6 @@ export default {
         font-weight: 900;
         color: #ffffff;
         text-decoration: none;
-    }
-
-    button {
-        cursor: pointer;
         padding: 10px 29px 10px 33px;
         background: transparent;
         border: 1px solid #ffffff;
@@ -114,11 +110,11 @@ export default {
         transition: all .1s ease;
     }
 
-    button:first-child {
+    a:first-child {
         margin-right: 10px;
     }
 
-    button:hover {
+    a:hover {
         background: #FFC64F;
         border-color: #FFC64F;
     }
@@ -133,10 +129,18 @@ export default {
         gap: 119px;
     }
 
+    .logo-social a {
+        border: none;
+        padding: 0;
+        background: transparent;
+    }
+    
+
     .icons {
         margin-bottom: 19px;
         display: flex;
         gap: 4px;
+        cursor: pointer;
     }
 
     .social p {
