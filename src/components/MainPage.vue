@@ -7,7 +7,7 @@
 
         <img src="../assets/images/main/date.png" class="circle date">
         <img src="../assets/images/main/music.png" class="circle music">
-        
+
         <img src="../assets/images/main/logo.png" alt="logo" class="logo">
         <button>КУПИТЬ БИЛЕТ</button>
     </div>
@@ -20,10 +20,6 @@ export default {
 </script>
 
 <style scoped>
-    * {
-        font-family: 'Druk Wide Cyr';
-    }
-
     .main-page {
         background: #009E5C;
         position: relative;

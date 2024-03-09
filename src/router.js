@@ -10,7 +10,7 @@ import TicketsPage from "./components/TicketsPage.vue";
 export default createRouter({
     history: createWebHashHistory(),
     routes: [
-        {path: '/mainpage', component: MainPage},
+        {path: '/mainpage', component: MainPage, alias: '/'},
         {path: '/headliners', component: HeadlinersPage},
         {path: '/info', component: InfoPage},
         {path: '/map', component: MapPage},

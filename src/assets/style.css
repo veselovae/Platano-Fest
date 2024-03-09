@@ -3,10 +3,16 @@
     src: url('../assets/drukwidecyr-bold.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../assets/DrukCyr-Bold.woff') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Druk Wide Cyr';
 }
 
 body {

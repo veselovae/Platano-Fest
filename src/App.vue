@@ -12,15 +12,12 @@
     </nav>
   </header>
   <router-view></router-view>
-  <MainPage></MainPage>
 </template>
 
 <script>
-import MainPage from "./components/MainPage.vue";
 
 export default {
   name: 'App',
-  components: { MainPage }
  
 }
 </script>
@@ -40,7 +37,6 @@ header img {
 
 ul {
   display: flex;
-  color: #ffffff;
   gap: 54px;
   align-items: center;
 }
@@ -52,10 +48,28 @@ ul li {
   font-weight: 900;
 }
 
+ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transform: color .2s ease;
+}
+
+ul li a:hover {
+  color: #FFC64F;
+}
+
 ul li.buy-ticket {
   background: #FFC64F;
   padding: 10px 32px;
   border-radius: 150px;
+  transition: background .2s ease;
 }
 
+ul li.buy-ticket:hover {
+  background: #FF9900;
+}
+
+ul li.buy-ticket:hover a{
+  color: #ffffff;
+}
 </style>
