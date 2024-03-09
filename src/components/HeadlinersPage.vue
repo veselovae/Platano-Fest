@@ -146,8 +146,13 @@ export default {
         z-index: 9000;
     }
 
-    .art:hover ~ h3,  .art:hover ~ h4{
+    .headliner-name:hover h3, .artist-name:hover h4 {
         rotate: -2deg;
+    }
+
+    .headliner-name:hover .art, .artist-name:hover .art {
+        rotate: 0deg;
+        filter: grayscale(72%) brightness(80%);
     }
 
     .time {
@@ -161,11 +166,6 @@ export default {
 
     .art {
         rotate: -1deg;
-    }
-
-    .art:hover {
-        rotate: 0deg;
-        filter: grayscale(72%) brightness(80%);
     }
 
     .artists-info {
