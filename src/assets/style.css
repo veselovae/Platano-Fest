@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Druk Wide Cyr';
-    src: url('../assets/drukwidecyr-bold.otf') format('truetype');
+    src: url('../assets/drukwidecyr-bold.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Druk Cyr';
-    src: url('../assets/DrukCyr-Bold.woff') format('truetype');
+    src: url('../assets/DrukCyr-Bold.woff') format('woff');
 }
 
 * {

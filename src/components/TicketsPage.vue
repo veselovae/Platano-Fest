@@ -59,13 +59,15 @@ export default {
     .tickets-page {
         background: #FFC64F;
         width: 100%;
-        height: calc(100vh - 50px);
+        min-height: calc(100vh - 50px);
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .page-content {
+        padding-left: 40px;
         width: 1300px;
     }
 
@@ -87,6 +89,7 @@ export default {
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 21px;
+        margin-bottom: 50px;
     }
 
     .ticket {
@@ -185,5 +188,109 @@ export default {
         color: #111111;
     }
 
+    @media (max-width: 1300px) {
+        .page-content {
+            width: 900px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .page-content {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 40px;
+            padding-bottom: 30px;
+        }
+
+        .desc {
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: 20px;
+            padding-right: 30px;
+        }
+    }
+
+    @media (max-width: 670px) {
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .desc {
+            font-size: 10px;
+        }
+
+        .ticket {
+            width: 100%;
+            height: 150px;
+            margin-right: 30px;
+        }
+
+        .line {
+            height: 100%;
+            left: 55%;
+        }
+    
+        .ticket .date {
+            font-size: 10px;
+        }
+    
+        .ticket-content {
+            height: 120px;
+            gap: 50px;
+        }
+    
+        h5 {
+            font-size: 16px;
+        }
+    
+        .info {
+            font-size: 7px;
+        }
+    
+        .add {
+            margin-top: 20px;
+            font-size: 7px;
+        }
+    
+        button {
+            font-size: 7px;
+            padding: 10px 22px;
+            margin-bottom: 13px;
+        }
+    
+        .price {
+            font-size: 7px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .ticket .date {
+            font-size: 7px;
+        }
+    
+        h5 {
+            font-size: 12px;
+        }
+    
+        .info {
+            font-size: 6px;
+        }
+    
+        .add {
+            font-size: 6px;
+        }
+    
+        button {
+            font-size: 6px;
+            padding: 10px 15px;
+        }
+    
+        .price {
+            font-size: 6px;
+        }
+    }
 
 </style>

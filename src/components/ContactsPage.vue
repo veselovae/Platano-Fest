@@ -23,6 +23,8 @@
                     
                 </div>
 
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29190a598ffd78ce956f6f98e4a197ad5a14486d19afcd133008681fef5f6a39&amp;source=constructor" frameborder="0"></iframe>
+
                 <div class="logo-social">
                     <a href="#/mainpage" class="logo"><img src="../assets/images/contact/LOGO.png"></a>
                     <div class="social">
@@ -35,8 +37,7 @@
                     </div>
                 </div>
             </div>
-
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A29190a598ffd78ce956f6f98e4a197ad5a14486d19afcd133008681fef5f6a39&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+            
         </div>
     </div>
 </template>
@@ -49,10 +50,12 @@ export default {
 
 <style scoped>
     .contacts-page {
+        padding-left: 50px;
         position: relative;
         background: #1F1F1F;
         width: 100%;
-        height: calc(100vh - 50px);
+        min-height: calc(100vh - 50px);
+        height: 100%;
         display: flex;
         justify-content: center;
         color: #ffffff;
@@ -127,6 +130,7 @@ export default {
         display: flex;
         align-items: flex-end;
         gap: 119px;
+        padding-bottom: 50px;
     }
 
     .logo-social a {
@@ -153,5 +157,72 @@ export default {
         position: absolute;
         right: 100px;
         top: 170px;
+        width: 500px;
+        height: 400px;
     }
+
+    @media (max-width: 1050px) {
+        iframe {
+            position: static;
+            padding-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 750px) {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        iframe {
+            width: 350px;
+            height: 200px;
+        }
+    }
+
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        .num {
+            font-size: 13px;
+        }
+
+        .email {
+            font-size: 10px;
+        }
+
+        .for-partners {
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .buttons a{
+            display: block;
+            width: 200px;
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 280px;
+            height: 180px;
+        }
+
+        .logo-social {
+            gap: 30px;
+        }
+    }
+
 </style>

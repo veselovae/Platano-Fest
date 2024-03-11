@@ -29,7 +29,8 @@ export default {
     .info-page {
         position: relative;
         width: 100%;
-        height: calc(100vh - 50px);
+        min-height: calc(100vh - 50px);
+        height: 100%;
         background: #FFC64F;
         display: flex;
         justify-content: center;
@@ -43,19 +44,23 @@ export default {
     .bg-figue {
         right: 0;
         bottom: 0;
-        width: 55%;
+        height: 67%;
     }
 
     .bg-plant {
         right: 0;
         top: 0;
-        width: 36%;
+        min-width: 360px;
+        width: 40%;
+        
     }
     
     .bg-plant2 {
         right: 0;
         top: 0;
         width: 36%;
+        min-width: 360px;
+        width: 40%;
     }
 
     .bg-dots {
@@ -68,12 +73,15 @@ export default {
         right: 0;
         bottom: 0;
         width: 36%;
+        min-width: 455px;
     }
 
     /*content*/
 
     .page-content {
         width: 1300px;
+        z-index: 1000;
+        padding: 0 30px;
     }
 
     h1 {
@@ -101,5 +109,42 @@ export default {
         margin-bottom: 40px;
     }
 
+    @media (max-width: 1300px) {
+        .page-content {
+            width: 100%;
+        }
+    }
 
+    @media (max-width: 880px) {
+        .page-content {
+            background: rgb(255, 255, 255, .3);
+        }
+    }
+
+    @media (max-width: 750px) {
+        h1 {
+            font-size: 40px;
+        }
+
+        h3, h4, p {
+           
+            width: 300px;
+        }
+        h3 {
+            font-size: 25px;
+        }
+        
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 30px;
+        } 
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 25px;
+        } 
+    }
 </style>

@@ -1,37 +1,41 @@
 <template>
     <div class="headliners-page">
-        <h1>ХЭДЛАЙНЕРЫ</h1>
-
+        
         <div class="headliners">
-            <div class="headliner-name" v-for="(headliner, index) in headliners" :key="index">
-                <img :src="headliner.url" class="art">
-                <h3>{{ headliner.name }}</h3>
-                <div class="date-time">
-                    <p class="date">{{ headliner.date }}</p>
-                    <p class="time">{{ headliner.time }}</p>
+            <h1>ХЭДЛАЙНЕРЫ</h1>
+            <div class="headliners-list">
+                <div class="headliner-name" v-for="(headliner, index) in headliners" :key="index">
+                    <img :src="headliner.url" class="art">
+                    <h3>{{ headliner.name }}</h3>
+                    <div class="date-time">
+                        <p class="date">{{ headliner.date }}</p>
+                        <p class="time">{{ headliner.time }}</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <h2>АРТИСТЫ</h2>
+        
         <div class="artists">
-            <div class="artist-name" v-for="(artist, index) in artists" :key="index">
-                <img :src="artist.url" class="art">
-                <h4>{{ artist.name }}</h4>
-                <div class="date-time">
-                    <p class="date">{{ artist.date }}</p>
-                    <p class="time">{{ artist.time }}</p>
+            <h2>АРТИСТЫ</h2>
+            <div class="artists-list">
+                <div class="artist-name" v-for="(artist, index) in artists" :key="index">
+                    <img :src="artist.url" class="art">
+                    <h4>{{ artist.name }}</h4>
+                    <div class="date-time">
+                        <p class="date">{{ artist.date }}</p>
+                        <p class="time">{{ artist.time }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="artists-info">
-                <h5>Список приглашенных артистов постоянно пополняется</h5>
-                <p>Подписывайся на нас в соц. сетях чтобы не пропустить обновления</p>
-                <div class="social">
-                    <img src="../assets/images/headliners/VK.png" class="social-icon">
-                    <img src="../assets/images/headliners/IG.png" class="social-icon">
-                    <img src="../assets/images/headliners/TG.png" class="social-icon">
+                <div class="artists-info">
+                    <h5>Список приглашенных артистов постоянно пополняется</h5>
+                    <p>Подписывайся на нас в соц. сетях чтобы не пропустить обновления</p>
+                    <div class="social">
+                        <img src="../assets/images/headliners/VK.png" class="social-icon">
+                        <img src="../assets/images/headliners/IG.png" class="social-icon">
+                        <img src="../assets/images/headliners/TG.png" class="social-icon">
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -62,31 +66,79 @@ export default {
 
 <style scoped>
     .headliners-page {
-        width: 100%;
-        height: calc(100vh - 50px);
+        width: 100vw;
+        min-height: calc(100vh - 50px);
         background: #FFC64F;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
 
     h1 {
-        width: 1300px;
         font-size: 60px;
-        padding-top: 39px;
-        padding-bottom: 45px;
+        padding: 39px 0 45px 50px;
     }
 
     h2 {
-        width: 1300px;
         font-size: 30px;
-        padding-bottom: 34px;
-        padding-top: 35px;
+        padding: 35px 0 34px 50px;
     }
 
     .headliner-name, .artist-name {
         position: relative;
     }
+
+    
+    .headliners, .artists {
+        position: relative;
+    }
+
+    .artists {
+        left: -50px;
+        padding-left: 50px;
+    }
+
+    .headliners-list, .artists-list {
+        margin-left: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 43px;
+    }
+
+    .artists-list {
+        padding-bottom: 50px;
+    }
+
+    .art {
+        rotate: -1deg;
+    }
+
+    @media (max-width: 750px) {
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 510px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        .artists-list {
+            gap: 30px
+        }
+
+        .headliners-list, .artists-list {
+            margin-left: 30px;
+        }
+
+        h1, h2 {
+            padding-left: 30px;
+        }
+    }
+
+    /*date and time*/
 
     h3, h4, .date, .time {
         font-family: 'Druk Cyr';
@@ -159,18 +211,10 @@ export default {
         color: #FFC64F;
     }
 
-    .headliners, .artists {
-        display: flex;
-        gap: 43px;
-    }
 
-    .art {
-        rotate: -1deg;
-    }
-
+    /*artists info and socials*/ 
     .artists-info {
         width: 236px;
-        
     }
 
     .artists-info h5 {

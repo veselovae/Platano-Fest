@@ -1,7 +1,5 @@
 <template>
     <div class="map-page">
-        <img src="../assets/images/map/map.png" class="bg">
-
         <div class="page-content">
             <h1>КАРТА</h1>
             <div class="points">
@@ -14,6 +12,8 @@
                 </div>
             </div>
         </div>
+
+        <img src="../assets/images/map/map.png" class="bg">
     </div>
 </template>
 
@@ -39,7 +39,8 @@ export default {
     position: relative;
     background: #FEF2D9;
     width: 100%;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
+    height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -51,7 +52,8 @@ export default {
 }
 
 .page-content {
-    width: 1300px;
+    position: relative;
+    left: -470px;
 }
 
 h1 {
@@ -88,4 +90,58 @@ h1 {
     font-size: 16px;
 }
 
+
+
+@media (max-width: 1280px) {
+    .map-page {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .points {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 0;
+    }
+
+    .point-text {
+        width: 150px;
+    }
+
+    .bg {
+        position: relative;
+        align-self: flex-end;
+        width: 150%;
+        right: 0;
+    }
+    
+    .page-content {
+        position: static;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+}
+
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        .points {
+            gap: 10px;
+        }
+    
+        .point-text {
+            width: 100px;
+            font-size: 10px;
+        }
+    }
 </style>

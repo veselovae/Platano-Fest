@@ -5,10 +5,12 @@
         <img src="../assets/images/main/bg3.png" class="bg bg3">
         <img src="../assets/images/main/bg4.png" class="bg bg4">
 
-        <img src="../assets/images/main/date.png" class="circle date">
-        <img src="../assets/images/main/music.png" class="circle music">
+        <div>
+            <img src="../assets/images/main/date.png" class="circle date">
+            <img src="../assets/images/main/music.png" class="circle music">
 
-        <img src="../assets/images/main/logo.png" alt="logo" class="logo">
+            <img src="../assets/images/main/logo.png" alt="logo" class="logo">
+        </div>
         <a href="#/tickets">КУПИТЬ БИЛЕТ</a>
     </div>
 </template>
@@ -31,6 +33,11 @@ export default {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+    }
+
+    .main-page div{
+        position: relative;
+        z-index: 9999;
     }
 
     .logo {
@@ -60,15 +67,47 @@ export default {
 
     .date {
         z-index: 9999;
-        right: 507px;
-        bottom: 290px;
+        right: -195px;
+        bottom: -100px;
         rotate: 23deg;
     }
 
     .music {
         z-index: 9999;
-        top: -3px;
-        left: 514px;
+        top: -171px;
+        left: -187px;
+    }
+
+    @media (max-width: 900px) {
+        .logo {
+            height: 150px;
+        }
+
+        .date, .music {
+            height: 100px;
+        }
+
+        .date {
+            right: -100px;
+            bottom: -100px;
+        }
+    
+        .music {
+            top: -100px;
+            left: -100px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .date {
+            right: -50px;
+            bottom: -100px;
+        }
+    
+        .music {
+            top: -100px;
+            left: -60px;
+        }
     }
 
     .bg {
@@ -77,28 +116,28 @@ export default {
 
     .bg4 {
         bottom: 0;
-        z-index: 9500;
+        z-index: 8500;
         width: 100%;
     }
 
     .bg3 {
         bottom: 0;
         left: 0;
-        z-index: 9000;
+        z-index: 8000;
         height: 100%;
     }
 
     .bg2 {
         bottom: -100px;
         right: -150px;
-        z-index: 8500;
+        z-index: 7500;
         width: 100%;
     }
 
     .bg1 {
-        top: -70px;
         right: 0;
-        z-index: 8000;
+        z-index: 6000;
         width: 40%;
+        height: 100%;
     }
 </style>
