@@ -1,5 +1,5 @@
 const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
-    base: "/Platano-Fest",
+    publicPath: "/Platano-Fest",
     transpileDependencies: true,
 });
