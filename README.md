@@ -12,7 +12,7 @@
 
 ## Технологии
 - HTML5
-- CSS5
+- CSS
 - [Vue3](https://v3.ru.vuejs.org/)
 - [Vue Router](https://router.vuejs.org/)
 - [Pixel Perfect](https://chromewebstore.google.com/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru)
