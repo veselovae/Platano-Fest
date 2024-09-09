@@ -5,7 +5,6 @@
 - [Live Demo](#live-demo)
 - [Технологии](#технологии)
 - [Начало работы](#project-setup)
-- [Compile and Hot-Reload for Development](#Compile-and-Hot-Reload-for-Development)
 
 ## Live Demo
 [Live Demo](https://veselovae.github.io/Platano-Fest/)
